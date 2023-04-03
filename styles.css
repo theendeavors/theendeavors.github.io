@@ -1,0 +1,126 @@
+:root{
+    --light-theme-bg:rgb(255, 255, 255);
+    --light-theme-font:rgb(36, 35, 35);
+    --light-theme-navigation:rgb(116, 113, 113);
+}
+body{
+    background-color: var(--light-theme-bg);
+}
+.body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.hero{
+    margin-top: 200px;
+}
+.hero h1 {
+    color: var(--light-theme-font);
+    font-size: 60px;
+    font-weight: bolder;
+    font-family: monospace  ;
+}
+.hero h2 {
+    color: var(--light-theme-font);
+    font-family: monospace;
+    font-size: 30px;
+    margin-left: 30px;
+}
+
+.navigation{
+    background-color:var(--light-theme-navigation);
+    position: absolute ;
+    width: 100vw;
+    height: 55px;   
+    border-radius: 25px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.navigation .buttons{   
+    margin-left: 200px;
+    align-content: flex-end;
+}
+.buttons button{
+    border: none;
+    padding: 8px 19px;
+    margin: 5px;
+    border-radius: 16px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+button {
+    border: none;
+    color: #fff;
+    background-image: linear-gradient(30deg, #0400ff, #4ce3f7);
+    border-radius: 20px;
+    background-size: 100% auto;
+    font-family: inherit;
+    font-size: 17px;
+    padding: 0.6em 1.5em;
+}
+
+button:hover {
+    background-position: right center;
+    background-size: 200% auto;
+    -webkit-animation: pulse 2s infinite;
+    animation: pulse512 1.5s infinite;
+}
+
+@keyframes pulse512 {
+    0% {
+        box-shadow: 0 0 0 0 #05bada66;
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgb(218 103 68 / 0%);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
+    }
+}
+.body .description{
+    width:90vw;
+    height: 500px;
+    display: flex;
+    background: #004350;
+    margin:40px;
+    justify-content: space-between;
+    box-shadow: 10px 10px 10px 10px rgba(31, 29, 29, 0.897);
+}
+.body .description .image {
+    height: 100px;
+    width: 100px;
+    background-color: black;
+    margin: 20px;
+    border-radius: 20px;
+}
+.body .description .paragraph {
+    margin: 20px;
+    border-radius: 20px;
+}
+@media (max-width:800px) {
+    .navigation{
+        height: 100px;
+    }
+    .navigation .buttons{
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+    .buttons button{
+        font-size: 12px;
+    }
+    .body .hero h1{
+        font-size: 30px;
+    }
+    .body .hero h2 {
+        font-size: 15px;
+    }
+    .body .description{
+        flex-direction: column;
+    }
+}
